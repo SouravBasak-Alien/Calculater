@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<section class="section">
+		<div class="middle">
+			<h1>Calculator</h1>
+			<input id="calculateDisplay" type="text" value="">
+			<br>
+			<button onclick="number(7)" >7</button>
+			<button onclick="number(8)">8</button>
+			<button onclick="number(9)">9</button>
+			<button onclick="number('/')">/</button>
+			<br>
+			<button onclick="number(4)">4</button>
+			<button onclick="number(5)">5</button>
+			<button onclick="number(6)">6</button>
+			<button onclick="number('*')">*</button>
+			<br>
+			<button onclick="number(1)">1</button>
+			<button onclick="number(2)">2</button>
+			<button onclick="number(3)">3</button>
+			<button onclick="number('-')">-</button>
+			<br>
+			<button onclick="number(0)">0</button>
+			<button onclick="number('.')">.</button>
+			<button onclick="number('+')">+</button>
+			<button onclick="total()">=</button>
+			<br>
+			<button onclick="ac()">ac</button>
+			
+		</div>
+	</section>
+
+	<script>
+
+    function number(newNum){
+		var anotherNum = document.getElementById('calculateDisplay').value;
+		document.getElementById('calculateDisplay').value = (anotherNum + newNum);
+	}
+
+	function total(){
+		var totalResult = document.getElementById('calculateDisplay').value;
+		var grandTotal = eval(totalResult)
+		document.getElementById('calculateDisplay').value = grandTotal;
+	}
+
+	function ac(){
+		document.getElementById('calculateDisplay').value = "" ;
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+			
+    //     var num1 = document.getElementById('seven').innerText;
+	// 	NumberOne = parseInt(num1);
+	// 	var num2 = document.getElementById('seven').innerText;
+	// 	NumberTwo = parseInt(num2)
+
+	// 	console.log(typeof(NumberOne))
+
+	// var display =	document.getElementById('calculateDisplay').innerText;
+	// 	console.log(typeof(display))
+
+	// 	var num2 =  21;
+	// 	var	sum = NumberOne + NumberTwo;
+	// 	document.getElementById('calculateDisplay').value = sum;
+
+	// 	var sub = NumberOne - NumberTwo;
+	// 	document.getElementById('calculateDisplay').value = sub;
+		</script>
+	
+</body>
+</html>
