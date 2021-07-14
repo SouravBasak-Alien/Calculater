@@ -35,7 +35,8 @@
 			<button onclick="number('+')">+</button>
 			<button onclick="total()">=</button>
 			<br>
-			<button onclick="ac()">ac</button>
+			<button class="btnstyle" onclick="ac()">Ac</button>
+			<button class="btnstyle" onclick="del()">Del</button>
 			
 		</div>
 	</section>
@@ -56,6 +57,12 @@
 	function ac(){
 		document.getElementById('calculateDisplay').value = "" ;
 		
+	}
+
+
+	function del(newNum){
+		var anotherNum = document.getElementById('calculateDisplay').value;
+		document.getElementById('calculateDisplay').value = (anotherNum.slice(0,-1));
 	}
 
 
